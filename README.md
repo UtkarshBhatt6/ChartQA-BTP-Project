@@ -1,25 +1,37 @@
 # ChartQA-BTP-Project
 
-This repository aims to finetune the IDEFICS model on the ChartQA dataset for visual question answering (VQA) tasks.
+This repository aims to improve **Visual Question Answering (VQA) on charts** using advanced vision-language techniques and iterative refinement strategies. It is part of an academic Bachelor's Thesis Project (BTP).
 
 ## 📁 Repository Structure
 
 - `ChartQADataset/`  
-  Contains the ChartQA dataset files used for training and evaluation.
+  Contains the ChartQA dataset used for model training, validation, and testing.
 
 - `Data Extraction/`  
-  Includes scripts and utilities for preparing and extracting relevant data from the ChartQA dataset.
+  Includes scripts for preprocessing and extracting relevant data components from the ChartQA dataset.
 
 - `Models/`  
-  Contains the core codebase for finetuning the IDEFICS model, including training scripts, evaluation pipelines, and utility functions.
+  Core implementation directory for all VQA model variants and experimentation.
+  
+  - `chart-vlm/`  
+    Initial model developed during BTP Phase 1 focused on building a basic vision-language model for chart question answering.
+  
+  - `vqa_charts/`  
+    Integrates **Segment Anything Model (SAM)** to identify objects of interest and uses similarity-based methods to extract relevant bounding boxes.
+  
+  - `refocus_modified/`  
+    Implements an **iterative zooming technique** to progressively enhance the focus area within the chart image, improving answer accuracy by generating better zoomed-in views of regions of interest.
 
-## 🧠 Objective
+## 🎯 Project Goal
 
-To adapt and fine-tune the IDEFICS multimodal model to accurately answer questions based on various chart types (bar, line, pie, etc.) from the ChartQA benchmark dataset.
+The objective of this project is to enhance the performance of visual question answering on chart-based images (e.g., bar charts, pie charts, line graphs) by integrating:
+- Chart-specific object detection,
+- Region-aware zooming and focusing, and
+- Multimodal reasoning techniques.
 
 ## 🚀 Getting Started
 
-1. Clone the repository:
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/UtkarshBhatt6/ChartQA-BTP-Project.git
    cd ChartQA-BTP-Project
